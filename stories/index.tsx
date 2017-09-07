@@ -6,7 +6,7 @@ import DateLabel from './DateLabel'
 
 const today = new Date();
 
-storiesOf('datelabel', module)
+storiesOf('DateLabel', module)
   .add('default', () => (
     <div>
       <DateLabel fullDate={today} onClick={action('onClick')} />

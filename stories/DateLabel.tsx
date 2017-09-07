@@ -10,10 +10,10 @@ export interface dateProps {
 export class DateLabel extends React.Component<dateProps, any> {
     render() {
 		const fullDate = this.props.fullDate;
-		
+		fullDate.setDate(fullDate.getDate());
 		const day: number = fullDate.getDay();
 		const date: number = fullDate.getDate();
-		const daysArr: string[] = [ "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
+		const daysArr: string[] = [ "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" ]
 		
 		return <div className="DateLabel">
 				<label onClick={this.props.onClick}> <b>{daysArr[day]} {date}</b> </label>
